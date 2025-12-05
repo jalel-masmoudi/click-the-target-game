@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Target - Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎯 Click the Target</h1>
+        <p class="subtitle">Test your reflexes - Click circles before they vanish!</p>
+    </header>
+
+    <main>
+        <div class="game-container">
+            <!-- Game Stats Section -->
+            <div class="stats-panel">
+                <div class="stat">
+                    <span class="stat-label">Score:</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Time Left:</span>
+                    <span class="stat-value" id="timer">30</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Difficulty:</span>
+                    <span class="stat-value difficulty-badge" id="difficulty">Easy</span>
+                </div>
+            </div>
+
+            <!-- Game Play Area -->
+            <div class="game-area" id="gameArea">
+                <!-- Target circle will be added here by JavaScript -->
+            </div>
+
+            <!-- Game Controls -->
+            <div class="controls-panel">
+                <button class="btn btn-primary" id="startBtn" onclick="startGame()">Start Game</button>
+                <button class="btn btn-secondary" id="resetBtn" onclick="resetGame()" disabled>Reset</button>
+                <div class="difficulty-selector">
+                    <label for="difficultySelect">Select Difficulty:</label>
+                    <select id="difficultySelect" onchange="changeDifficulty()">
+                        <option value="easy">Easy (30s)</option>
+                        <option value="medium">Medium (20s)</option>
+                        <option value="hard">Hard (10s)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div class="modal" id="gameOverModal">
+            <div class="modal-content">
+                <h2 id="gameOverTitle">Game Over!</h2>
+                <p class="final-score">Final Score: <span id="finalScore">0</span></p>
+                <p class="game-feedback" id="gameFeedback"></p>
+                <button class="btn btn-primary btn-lg" onclick="closeModal()">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Modal Overlay -->
+        <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Click the Target Game | Made with HTML5, CSS3 & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

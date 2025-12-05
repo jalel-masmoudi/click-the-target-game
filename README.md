@@ -2,6 +2,7 @@
 
 **Subject:** Tutored Project (HTML5, CSS3, JavaScript)  
 **Student Level:** 2nd Year - Computer Science  
+**authors:** Jalel Masmoudi & Mahdi kammoun
 **Instructor:** Mohamed Karim Abdmouleh  
 **Date:** December 2025
 
